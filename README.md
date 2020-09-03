@@ -24,7 +24,7 @@ chrome.alarms.create(alarmName, {
  ```
  Alarm trigger Callback with Notification
  
- PS: Notification name should be unique so that it will be visble to user otherwise duplicate name on notification wont be visible in chrome:
+ PS: Notification name should be unique so that it will be visble to user otherwise duplicate name on notification wont be visible in chrome. In this case i have create notification name using Alarm name plus current millisecond:
   ```javascript
   chrome.alarms.onAlarm.addListener(function (alarm) {
 	console.log("Got an alarm!", alarm);
