@@ -1,0 +1,23 @@
+{
+    "name": "Chrome Extension for Alarm and notifications",
+    "version": "1.0",
+    "description": "Chrome Extension for Alarm and notifications!",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+	 "permissions": ["activeTab", "declarativeContent", "storage","alarms","notifications"],
+		"content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "match_about_blank": true,
+      "js": ["jquery-3.5.1.min.js", "content.js"],
+      "all_frames": true
+    }
+  ],
+  	"web_accessible_resources": [
+		"images/call.svg"
+
+],
+    "manifest_version": 2
+  }
