@@ -11,8 +11,17 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 	switch (request.action) {
 		case "listAlarm":
 			chrome.alarms.getAll(function (alarms) {
-				console.log(alarms);
-			});
+	console.log(alarms);
+	var message = {
+		action: "alarms",
+		senddata: alarms
+	};
+	chrome.tabs.query({}, function (tabs) {
+		for (var i = 0; i < tabs.length; i++) {
+			chrome.tabs.sendMessage(tabs[i].id, message);
+		}
+	});
+});
 			break;
 		case "createAlarm":
 			createAlarm("ferozAlarm1");
