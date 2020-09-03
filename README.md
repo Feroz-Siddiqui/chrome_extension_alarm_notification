@@ -1,6 +1,6 @@
 # chrome_extension_alarm_notification
 
-This project is create for basic functionality of chrome extesion alarm and Notification.
+This project is create for basic functionality of chrome extesion alarm and Notification. All code should be written in background js.
 
 
 Following are points to be considered while setting the alarm.
@@ -14,7 +14,8 @@ chrome.alarms.create(alarmName, {
 ```
 
 To trigger the alarm once at specific interval below is code :
-it will trigger the alarm after 10 seconds
+
+PS:it will trigger the alarm after 10 seconds
 ```javascript
 var triggerDate = new Date(Date.now() + 10000);
 chrome.alarms.create(alarmName, {
