@@ -1,6 +1,6 @@
 # chrome_extension_alarm_notification
 
-This project demonstrate the basic functionality of chrome extesion alarm and Notification. All code should be written in background js.
+This project demonstrate the basic functionality of chrome extension alarm and Notification. All code should be written in background js.
 
 
 Following are points to be considered while setting the alarm.
